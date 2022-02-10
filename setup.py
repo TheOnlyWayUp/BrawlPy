@@ -1,8 +1,7 @@
 from setuptools import setup
-
 from pathlib import Path
-this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
+
+long_description = (Path(__file__).parent / "README.md").read_text()
 
 setup(
   name = 'brawlpy',
@@ -16,7 +15,7 @@ setup(
   long_description=long_description,
   long_description_content_type="text/markdown",
   download_url = 'https://github.com/PyStarr/BrawlPy/archive/v1.2.5.tar.gz',
-  keywords = ['wrapper', 'brawlstars', 'api','brawlstarsApiWrapper'],   
+  keywords = ['wrapper', 'brawlstars', 'api','brawlstarsApiWrapper', 'asynchronous'],   
   install_requires=[
           'aiohttp',
       ],
