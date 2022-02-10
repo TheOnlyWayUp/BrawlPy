@@ -6,23 +6,22 @@ __location__ = os.path.realpath(
     os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 class Player:
-
     """
     Player object with all its attribute
 
-    name - The Name of the player
-    tag - The Tag of the player
-    nameColor - The Color of the name of the player
-    icon_id - The ID of the player's icon
-    trophies - The Trophies of the player
-    highestTrophies - The Highest Trophies the player ever reached
-    soloVictories - The number of Solo-Showdown matches the player has won
-    duoVictories - The number of Duo-Showdown matches the player has won
-    teamVictories - The number of 3 vs 3 matches the player has won
-    bestTimeAsBigBrawler - The Player's best time as being the big brawler
-    bestRoboRumbleTime - The Player's best time in Robo-Rumble mode
-    brawlers - A list of all the brawlers the player has
-    club - The club that the player is in
+    name: str - The Name of the player
+    tag: str - The Tag of the player
+    nameColor: str - The Color of the name of the player
+    icon_id: int - The ID of the player's icon
+    trophies: list - The Trophies of the player
+    highestTrophies: list - The Highest Trophies the player ever reached
+    soloVictories: int - The number of Solo-Showdown matches the player has won
+    duoVictories: int - The number of Duo-Showdown matches the player has won
+    teamVictorie: ints - The number of 3 vs 3 matches the player has won
+    bestTimeAsBigBrawler: int - The Player's best time as being the big brawler
+    bestRoboRumbleTime: int - The Player's best time in Robo-Rumble mode
+    brawlers: list - A list of all the brawlers the player has
+    club: str - The club that the player is in
     """
 
     def __init__(self,name,tag,nameColor,icon_id,trophies,expLevel,expPoints,club,highestTrophies,soloVictories,duoVictories,teamVictories,bestRoboRumbleTime,bestTimeAsBigBrawler,brawlers,battleLog):
@@ -50,17 +49,16 @@ class Player:
         return "{0.name} ({0.tag})".format(self)
 
 class Club:
-
     """
     Club object with all its attribute
 
-    name - The Name of the club
-    tag - The Tag of the club
-    description - The Description of the club
-    type - The Type of the club (inviteOnly,closed,open)
-    badgeID - The Badge ID of the club
-    requiredTrophies - The amount of trophies required to join the club
-    members - A list a all the members of the club
+    name: str - The Name of the club
+    tag: str - The Tag of the club
+    description : str- The Description of the club
+    type: str - The Type of the club (inviteOnly,closed,open)
+    badgeID: int - The Badge ID of the club
+    requiredTrophies: int - The amount of trophies required to join the club
+    members: brawlpy.ClubMember - A list a all the members of the club
     """
 
     def __init__(self,tag,name,description,type,badgeID,requiredTrophies,trophies,members):
@@ -80,7 +78,6 @@ class Club:
         return "{0.name} ({0.tag})".format(self)
 
 class ClubMember:
-
     """
     ClubMember object with all its attribute
 
@@ -108,7 +105,6 @@ class ClubMember:
 
 
 class ClubRanking:
-
     """
     ClubRanking object with all its attribute
 
